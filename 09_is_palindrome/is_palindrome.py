@@ -21,3 +21,8 @@ def is_palindrome(phrase):
         >>> is_palindrome('Noon')
         True
     """
+
+    # I referenced the solution for the `replace()` call
+    downcase_phrase = phrase.lower().replace(' ', '') 
+    return downcase_phrase == downcase_phrase[::-1]
+    
