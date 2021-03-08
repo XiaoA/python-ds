@@ -11,3 +11,8 @@ def remove_every_other(lst):
         >>> lst
         [1, 2, 3, 4, 5]
     """
+    # Initial Solution
+    return lst[0::2]
+
+    # SB Solution
+    # return lst[::2]
