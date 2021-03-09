@@ -40,3 +40,7 @@ def two_oldest_ages(ages):
 
     ages_set = set(ages)
     return tuple(sorted(ages_set)[-2:])
+
+    # As a one-liner:
+    # return tuple(sorted(set(ages))[-2:])
+
