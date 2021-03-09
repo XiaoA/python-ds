@@ -14,4 +14,26 @@ def two_list_dictionary(keys, values):
 
         >>> two_list_dictionary(['a', 'b', 'c'], [1, 2, 3, 4])
         {'a': 1, 'b': 2, 'c': 3}
-   """
+    """
+
+    # Like Ruby, Python has a 'zip' method, but it won't work with inputs of uneven length. Instead, the cocumetation recommends using the `zip_longest` method:
+    # https://docs.python.org/3/library/itertools.html#itertools.zip_longest
+
+    # return dict(zip_longest(keys, values))
+
+    # This didn't work until I imported the library.
+    return dict(zip_longest(keys, values))
+
+    # Alternate SB approach
+    # out = {}
+
+    # for idx, val in enumerate(keys):
+    #     out[val] = values[idx] if idx < len(values) else None
+
+    # return out
+
+
+
+
+    
+
