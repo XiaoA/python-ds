@@ -19,3 +19,23 @@ def partition(lst, fn):
         >>> partition(["hi", None, 6, "bye"], is_string)
         [['hi', 'bye'], [None, 6]]
     """
+
+    a = []
+    b = []
+
+    for element in lst:
+        if fn(element):
+            a.append(element)
+        else:
+            b.append(element)
+
+    return [a, b]
+
+    # Alternate SB solution
+    # Clever, but less optimal solution --- this runs fn() twice on each element,
+    # not once:
+    #
+    # return [
+    #     [val for val in lst if fn(val)],
+    #     [val for val in lst if not fn(val)]
+    # ]

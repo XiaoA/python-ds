@@ -23,3 +23,29 @@ def sum_range(nums, start=0, end=None):
         >>> sum_range(nums, 1, 99)
         9
     """
+
+
+
+
+
+    """My first thought was to use a `reduce` function. But even when Imported the library, I had issues.
+
+    # return functools.reduce(nums)
+
+    # I learned that the built-in `Sum` function would probably perform better.
+    # Ref: https://docs.python.org/3/library/functions.html#sum
+    # https://realpython.com/python-reduce-function/#comparing-reduce-and-accumulate
+
+    # The SB implementation first checks for cases where there is no 'end', and returns the sum of the entire list, before slicing the start/end indices:
+    """
+
+    if end is None:
+        end = len(nums)
+
+    return sum(nums[start:end + 1])
+
+
+
+   # When might the `reduce` function be a better approach? I'll need to look into that more.
+
+    

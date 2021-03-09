@@ -16,3 +16,11 @@ def friend_date(a, b):
         >>> friend_date(sauron, gandalf)
         True
     """
+    # Version 1
+    if set(a[2]) & set(b[2]):
+        return True
+    else:
+        return False
+
+    # SB alternate solution
+    # return bool(set(a[2] & set(b[2])))

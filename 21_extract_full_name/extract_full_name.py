@@ -14,3 +14,11 @@ def extract_full_names(people):
         >>> extract_full_names(names)
         ['Ada Lovelace', 'Grace Hopper']
     """
+    # Initial version
+    # for person in people:
+    #     return [f"{person['first']} {person['last']}"]
+
+    # It only returns the first name: ['Ada Lovelace']
+
+    # SB Solution
+    return [f"{person['first']} {person['last']}" for person in people]

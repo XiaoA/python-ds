@@ -18,3 +18,16 @@ def repeat(phrase, num):
         >>> repeat('abc', 'nope') is None
         True
     """
+
+    # Initial solution
+    if type(num) != int or num < 0:
+        return None
+
+    return phrase * num
+
+    # Alternate SB approach
+
+    # if not isinstance(num, int) or num < 0:
+    #     return None
+
+    # return phrase * num

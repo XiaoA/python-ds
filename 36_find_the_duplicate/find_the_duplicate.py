@@ -13,3 +13,25 @@ def find_the_duplicate(nums):
         >>> find_the_duplicate([2, 1, 3, 4]) is None
         True
     """
+    # My approach was on the right track, but failed in the case of no duplicates
+
+    """duplicate_set = set()
+
+    for num in nums:
+        if num not in duplicate_set:
+            duplicate_set.add(num)
+            return duplicate_set
+        elif len(duplicate_set) == 0:
+            return None
+
+    return duplicate_set
+    """
+
+    # SB approach, using 'positive' logic:
+    seen = set()
+
+    for num in nums:
+        if num in seen:
+            return num
+        seen.add(num)
+ 

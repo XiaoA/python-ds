@@ -19,3 +19,14 @@ def read_file_list(filename):
     # hint: when you read lines of files, there will be a "newline"
     # (end-of-line character) at the end of each line, and you want to
     # strip that off before you print it. Do some research on that!
+
+    
+    # Relevent Documentation:
+    # https://docs.python.org/3/library/functions.html#open
+    # https://docs.python.org/3/tutorial/inputoutput.html#tut-files
+    # https://docs.python.org/3/library/stdtypes.html#bytearray.strip
+
+    with open(filename) as f:
+        for line in f:
+            line = line.strip()
+            print(f"- {line}")

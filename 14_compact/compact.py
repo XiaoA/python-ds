@@ -4,3 +4,12 @@ def compact(lst):
         >>> compact([0, 1, 2, '', [], False, (), None, 'All done'])
         [1, 2, 'All done']
     """
+
+    # This was close, but only returned
+    # [1]
+
+    # compact = [element for element in lst if element == True]
+    # return compact
+
+    return [element for element in lst if element]
+

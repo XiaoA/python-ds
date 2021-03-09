@@ -21,3 +21,30 @@ def sum_pairs(nums, goal):
         >>> sum_pairs([11, 20, 4, 2, 1, 5], 100)
         ()
     """
+    # I tried several variations of list comprehensions. This version (list comprehension) returns an empty tuple:
+    # num1 = 0
+    # num2 = 0
+    # result = [(num1, num2) for num in nums if num1 + num2 == goal]
+    # return tuple(result)
+
+    # SB Solution
+    already_visited = set()
+    
+    for i in nums:
+        difference = goal - i
+
+        if difference in already_visited:
+            return (difference, i)
+
+        already_visited.add(i)
+
+    return ()
+
+
+
+
+
+
+
+
+

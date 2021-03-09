@@ -30,3 +30,13 @@ def includes(collection, sought, start=None):
         >>> includes({"apple": "red", "berry": "blue"}, "blue")
         True
     """
+
+    # I didn't really understand the problem, so I checked SB's approach.
+
+    if isinstance(collection, dict):
+        return sought in collection.values()
+
+    if start is None or isinstance(collection, set):
+        return sought in collection
+
+    return sought in collection[start:]
