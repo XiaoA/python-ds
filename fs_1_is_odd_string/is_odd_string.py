@@ -29,3 +29,23 @@ def is_odd_string(word):
     """
 
     # Hint: you may find the ord() function useful here
+    # https://docs.python.org/3/library/functions.html#ord
+
+    sum = 0
+
+    for char in word:
+       sum = sum + 1
+
+    if sum % 2 != 0:
+        return True
+
+    return False
+
+    # I didn't use the ord() function. The SB version did:
+    #  DIFF = ord("a") - 1
+
+    # total = sum((ord(c) - DIFF) for c in word.lower())
+
+    # return total % 2 == 1
+    
+    
